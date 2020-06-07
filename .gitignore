@@ -1,0 +1,6 @@
+node_modules
+web/scripts
+# 插画图片来自Pixiv
+web/images/pic
+dist
+build

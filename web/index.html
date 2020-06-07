@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <title>Grapes播放器</title>
+  <style>
+    @font-face {
+      font-family: 'iconfont';
+      src: url('fonts/iconfont.eot');
+      src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/iconfont.woff2') format('woff2'),
+        url('fonts/iconfont.woff') format('woff'),
+        url('fonts/iconfont.ttf') format('truetype'),
+        url('fonts/iconfont.svg#iconfont') format('svg');
+    }
+
+    .iconfont {
+      font-family: 'iconfont' !important;
+      font-size: 16px;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="app-bar">
+    <div>
+      <img src="./logo.png" alt="" class="logo">
+      Grapes播放器
+    </div>
+    <span class="iconfont list-btn">&#xe6f5;</span>
+  </header>
+  <main class="player-cntr">
+    <video id="video" class="player" poster="images/pic/1.jpg"></video>
+    <div class="control-bar">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="tools">
+        <div class="time">00:00:00/00:00:00</div>
+        <div class="btn-cntr">
+          <div class="iconfont rewind-btn">&#xe6a7;</div>
+          <div class="iconfont play-btn">&#xe624;</div>
+          <div class="iconfont forward-btn">&#xe6a0;</div>
+        </div>
+        <div class="rate">
+          <div class="iconfont rate-btn">&#xe6f5;</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="play-list play-list-hide"></div>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+.player-cntr {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+  .player {
+    width: 100%;
+    height: calc(100vh - 2 * #{$app-bar-height});
+    overflow: hidden;
+  }
+  .error {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    -webkit-text-stroke: 2px $band-color;
+  }
+  .error-hide {
+    display: none;
+  }
+
+  .player-pic {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: calc(100% - #{$app-bar-height});
+  }
+
+  .control-bar {
+    .progress-bar {
+      width: 100%;
+      background-color: #979a9a;
+      height: 6px;
+      cursor: pointer;
+      .progress {
+        width: 0;
+        background-color: $band-color;
+        height: 100%;
+      }
+    }
+    .tools {
+      display: flex;
+      justify-content: space-between;
+      background-color: #ffffff;
+      height: $app-bar-height - 6px;
+      align-items: center;
+      padding: 0 32px;
+      .btn-cntr {
+        display: flex;
+        align-items: center;
+        .rewind-btn,
+        .play-btn,
+        .forward-btn {
+          color: $band-color;
+          font-size: 32px;
+          margin: 0 2px;
+          cursor: pointer;
+        }
+        .play-btn {
+          font-size: 40px;
+        }
+      }
+      .time,
+      .rate {
+        width: 160px;
+        position: relative;
+        .rate-btn {
+          color: $band-color;
+          font-size: 24px;
+          float: right;
+          clear: both;
+          cursor: pointer;
+        }
+        .rate-menu {
+          position: absolute;
+          width: 120px;
+          background-color: #fff;
+          padding: 8px;
+          list-style: none;
+          bottom: 18px;
+          right: 0;
+          box-shadow: 0 0 4px grey;
+          border-radius: 8px;
+          opacity: 1;
+          transition: opacity 300ms ease-in-out, visibility 300ms;
+          z-index: 1000;
+          li {
+            border-bottom: 1px solid #d8d8d8;
+            cursor: pointer;
+            padding: 8px 0;
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+        .rate-menu-hide {
+          opacity: 0;
+          overflow: hidden;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

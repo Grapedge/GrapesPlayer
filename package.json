@@ -1,0 +1,37 @@
+{
+  "name": "grapes-player",
+  "version": "1.0.0",
+  "description": "Grapes媒体播放器",
+  "main": "main.js",
+  "author": "Grapes",
+  "license": "MIT",
+  "private": true,
+  "build": {
+    "productName": "GrapesPlayer",
+    "extends": null,
+    "npmRebuild": false,
+    "files": [
+      "main.js",
+      "web/**/*"
+    ]
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "electron-dev": "set ELECTRON_START_URL=http://localhost:4000 && electron ."
+  },
+  "devDependencies": {
+    "electron": "^9.0.2",
+    "electron-builder": "^22.7.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "css-loader": "^3.5.3",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1"
+  }
+}

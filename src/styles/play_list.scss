@@ -1,0 +1,32 @@
+$list-width: 256px;
+.play-list {
+  position: fixed;
+  width: $list-width;
+  height: calc(100% - #{$app-bar-height});
+  top: $app-bar-height;
+  right: 0;
+  box-shadow: 0 0 2px gray;
+  transition: right 500ms;
+  background-color: #fff;
+  overflow-y: auto;
+  .list-item {
+    padding: 16px;
+    border-bottom: 1px solid gainsboro;
+    cursor: pointer;
+    div:first-child {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .desc {
+      font-size: 10px;
+      color: #616161;
+      margin-top: 4px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+.play-list-hide {
+  right: -$list-width;
+}

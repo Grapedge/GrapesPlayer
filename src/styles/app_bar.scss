@@ -1,0 +1,21 @@
+.app-bar {
+  background: linear-gradient(to bottom right, $band-color, #8dd1ff);
+  width: 100%;
+  padding: 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  height: $app-bar-height;
+  .logo {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    -webkit-user-drag: none;
+  }
+
+  .list-btn {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
